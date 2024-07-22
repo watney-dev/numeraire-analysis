@@ -37,7 +37,7 @@ function stake(uint256 _value, bytes32 _tag, uint256 _tournamentID, uint256 _rou
 **Impact**:
 
 -   **Functionality**: The use of `delegatecall` allows the `NumeraireBackend` contract to leverage external contract logic while keeping its own storage and state intact. This means the `stake` function's implementation can be changed or upgraded in the `delegateContract` without redeploying the main `NumeraireBackend` contract.
--   **Flexibility**: This approach provides flexibility and upgradability to the smart contract, allowing the Numerai platform to adapt and evolve its staking mechanism without needing to migrate users' data to a new contract.
+-   **Flexibility**: This approach provides flexibility and upgradability to the smart contract, allowing the Numeraire platform to adapt and evolve its staking mechanism without needing to migrate users' data to a new contract.
 -   **Security Considerations**: While `delegatecall` provides powerful upgradability, it must be used cautiously due to potential security risks. If the `delegateContract` contains malicious code or becomes compromised, it can manipulate the state of the `NumeraireBackend` contract.
 
-The `stake` function in the Numerai smart contract demonstrates the use of `delegatecall` to maintain an upgradeable and flexible staking mechanism. This approach leverages external contract logic while preserving the context of the main contract, contributing to the robustness and adaptability of the Numerai protocol.
+The `stake` function in the Numeraire smart contract demonstrates the use of `delegatecall` to maintain an upgradeable and flexible staking mechanism. This approach leverages external contract logic while preserving the context of the main contract, contributing to the robustness and adaptability of the Numeraire protocol.
