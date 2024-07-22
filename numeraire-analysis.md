@@ -12,7 +12,7 @@
 
 **Block Explorer Link**: [Numeraire](https://etherscan.io/token/0x1776e1F26f98b1A5dF9cD347953a26dd3Cb46671#code)
 
-**Function Code**:
+**Function Code (line 384)**:
 ```solidity
 function stake(uint256 _value, bytes32 _tag, uint256 _tournamentID, uint256 _roundID, uint256 _confidence) stopInEmergency returns (bool ok) {
     return delegateContract.delegatecall(bytes4(sha3("stake(uint256,bytes32,uint256,uint256,uint256)")), _value, _tag, _tournamentID, _roundID, _confidence);
